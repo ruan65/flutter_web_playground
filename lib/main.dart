@@ -7,6 +7,12 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Flutter web',
+      theme: ThemeData(
+          primarySwatch: Colors.orange,
+          textTheme: Theme.of(context).textTheme.apply(
+                fontFamily: 'Open Sans',
+              )),
       home: HomeView(),
     );
   }

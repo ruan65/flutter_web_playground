@@ -35,11 +35,14 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   assets:
-  - assets/
-
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
+    - assets/
+  fonts:
+    - family: Open Sans
+      fonts:
+        - asset: assets/fonts/OpenSans-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/OpenSans-Regular.ttf
+          weight: 400
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:

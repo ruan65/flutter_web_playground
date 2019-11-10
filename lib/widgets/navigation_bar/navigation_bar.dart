@@ -17,10 +17,10 @@ class NavigationBar extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               _NavBarItem(title: 'Episodes'),
-              SizedBox(
-                width: 20,
-              ),
-              _NavBarItem(title: 'About')
+              SizedBox(width: 20),
+              _NavBarItem(title: 'About'),
+              SizedBox(width: 20),
+              _NavBarItem(title: 'Help')
             ],
           )
         ],
@@ -41,6 +41,7 @@ class _NavBarItem extends StatelessWidget {
         title,
         style: TextStyle(
           fontSize: 18,
+          fontWeight: FontWeight.w400,
         ),
       ),
     );
