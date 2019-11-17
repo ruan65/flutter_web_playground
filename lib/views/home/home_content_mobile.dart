@@ -6,6 +6,8 @@ class HomeContentMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.max,
       children: <Widget>[
         CourseDetails(),
         SizedBox(height: 100),

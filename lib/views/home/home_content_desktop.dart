@@ -5,11 +5,14 @@ import 'package:flutter_web_playground/widgets/course_details/course_detailes.da
 class HomeContentDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(children: [
-      CourseDetails(),
-      Expanded(
-        child: Center(child: CallToAction('Join Course')),
-      )
-    ]);
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        CourseDetails(),
+        Expanded(
+          child: Center(child: CallToAction('Join Course')),
+        )
+      ],
+    );
   }
 }
