@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_playground/constants/app_colors.dart';
 
 class CallToActionMobile extends StatelessWidget {
   final String title;
+
   const CallToActionMobile(this.title);
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
       height: 60,
       alignment: Alignment.center,
       child: Text(
@@ -18,7 +20,7 @@ class CallToActionMobile extends StatelessWidget {
         ),
       ),
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 31, 229, 146),
+        color: primaryColor,
         borderRadius: BorderRadius.circular(5),
       ),
     );
