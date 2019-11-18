@@ -6,11 +6,12 @@ import 'package:flutter_web_playground/widgets/nav_drawer/nav_drawer.dart';
 import 'package:flutter_web_playground/widgets/navigation_bar/navigation_bar.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class HomeView extends StatelessWidget {
+class LayoutTemplate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
-        builder: (context, sizingInfo) => Scaffold(
+        builder: (context, sizingInfo) =>
+            Scaffold(
               backgroundColor: Colors.white,
               drawer: sizingInfo.isMobile ? NavigationDrawer() : null,
               body: CenteredView(
@@ -18,10 +19,9 @@ class HomeView extends StatelessWidget {
                   children: <Widget>[
                     NavigationBar(),
                     Expanded(
-                      child: ScreenTypeLayout(
-                        mobile: HomeContentMobile(),
-                        desktop: HomeContentDesktop(),
-                      ),
+                        child: Navigator(
+                          onGenerateRoute:,
+                        )
                     )
                   ],
                 ),

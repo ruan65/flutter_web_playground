@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_playground/servicr_locator.dart';
 import 'package:flutter_web_playground/views/home/home_view.dart';
 
-void main() => runApp(App());
+void main() {
+  setupLocator();
+  runApp(App());
+}
 
 class App extends StatelessWidget {
   @override
