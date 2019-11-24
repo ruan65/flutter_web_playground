@@ -8,12 +8,12 @@ Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
     case homeRoute:
       return _getPageRoute(HomeView());
-    case homeRoute:
+    case aboutRoute:
       return _getPageRoute(AboutView());
-    case homeRoute:
-      return _getPageRoute(HomeView());
-    default:
+    case episodesRoute:
       return _getPageRoute(EpisodesView());
+    default:
+      return _getPageRoute(HomeView());
   }
 }
 
