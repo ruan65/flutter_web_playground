@@ -9,23 +9,26 @@ import 'package:responsive_builder/responsive_builder.dart';
 class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ResponsiveBuilder(
-        builder: (context, sizingInfo) => Scaffold(
-              backgroundColor: Colors.white,
-              drawer: sizingInfo.isMobile ? NavigationDrawer() : null,
-              body: CenteredView(
-                child: Column(
-                  children: <Widget>[
-                    NavigationBar(),
-                    Expanded(
-                      child: ScreenTypeLayout(
-                        mobile: HomeContentMobile(),
-                        desktop: HomeContentDesktop(),
-                      ),
-                    )
-                  ],
+    return ResponsiveBuilder(builder: (context, sizingInfo) {
+      print('sizing info: ${sizingInfo}');
+      return Scaffold(
+        backgroundColor: Colors.white,
+//        drawer: sizingInfo.isMobile ? NavigationDrawer() : null,
+        drawer: NavigationDrawer(),
+        body: CenteredView(
+          child: Column(
+            children: <Widget>[
+              NavigationBar(),
+              Expanded(
+                child: ScreenTypeLayout(
+                  mobile: HomeContentMobile(),
+                  desktop: HomeContentDesktop(),
                 ),
-              ),
-            ));
+              )
+            ],
+          ),
+        ),
+      );
+    });
   }
 }
