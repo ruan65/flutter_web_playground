@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_playground/service_locator.dart';
-import 'package:flutter_web_playground/views/home/home_view.dart';
 import 'package:flutter_web_playground/views/layout_template/layout_template.dart';
 
 void main() {

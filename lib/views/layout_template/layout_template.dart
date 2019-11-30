@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_playground/routing/route_names.dart';
 import 'package:flutter_web_playground/routing/router.dart';
 import 'package:flutter_web_playground/service_locator.dart';
 import 'package:flutter_web_playground/services/navigation_service.dart';
@@ -22,6 +23,7 @@ class LayoutTemplate extends StatelessWidget {
                         child: Navigator(
                       key: locator<NavigationService>().navigatorKey,
                       onGenerateRoute: generateRoute,
+                      initialRoute: homeRoute,
                     ))
                   ],
                 ),
