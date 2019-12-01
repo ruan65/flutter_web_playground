@@ -6,14 +6,14 @@ import 'package:flutter_web_playground/widgets/season_details/season_details.dar
 import 'package:provider_architecture/provider_architecture.dart';
 
 class EpisodesView extends StatelessWidget {
-  const EpisodesView({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return ViewModelProvider.withConsumer(
+    return ViewModelProvider<EpisodesViewModel>.withConsumer(
       viewModel: EpisodesViewModel(),
-      builder: (context, [model, child]) => SingleChildScrollView(
-          child: Column(
+      onModelReady: (model) => model.getEpisodes(),
+      builder: (context, model, child) =>
+          SingleChildScrollView(
+              child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
@@ -23,13 +23,15 @@ class EpisodesView extends StatelessWidget {
               title: 'SEASON 1',
               description:
                   'This season covers the absolute basics of Flutter Web Dev '
-                      'to get us up and running with a basic web app.',
+                  'to get us up and running with a basic web app.',
             ),
           ),
           SizedBox(
             height: 50,
           ),
-          EpisodesList(episodes: model.episodes),
+          model.episodes == null
+              ? CircularProgressIndicator()
+              : EpisodesList(episodes: model.episodes),
         ],
       )),
     );
