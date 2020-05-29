@@ -17,6 +17,8 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  html:
+  file_picker: ^1.9.0+1
   http:
   get_it:
   responsive_builder:

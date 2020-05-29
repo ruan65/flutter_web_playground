@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_playground/routing/route_names.dart';
-import 'package:flutter_web_playground/views/about/aboute_view.dart';
 import 'package:flutter_web_playground/views/episodes/episodes_view.dart';
+import 'package:flutter_web_playground/views/file_picker/file_picker_view.dart';
 import 'package:flutter_web_playground/views/home/home_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
@@ -9,7 +9,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case homeRoute:
       return _getPageRoute(HomeView());
     case aboutRoute:
-      return _getPageRoute(AboutView());
+      return _getPageRoute(FilePickerDemo());
     case episodesRoute:
       return _getPageRoute(EpisodesView());
     default:

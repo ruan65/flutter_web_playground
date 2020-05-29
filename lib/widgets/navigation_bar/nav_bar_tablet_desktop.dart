@@ -18,7 +18,7 @@ class NavBarTabletDesktop extends StatelessWidget {
             children: [
               NavBarItem('Episodes', episodesRoute),
               SizedBox(width: 20),
-              NavBarItem('About', aboutRoute),
+              NavBarItem('File picker', aboutRoute),
               SizedBox(width: 20),
               NavBarItem('Home', homeRoute),
             ],
